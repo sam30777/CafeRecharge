@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/recharge_button"
+        android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+        android:title="@string/recharge"/>
+   <item
+       android:title="@string/profile"
+       android:icon="@drawable/ic_person_black_24dp"
+       android:id="@+id/profile"
+       />
+    <item
+        android:id="@+id/cart"
+        android:title="Cart"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        />
+    <item
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:id="@+id/favorites"
+        android:title="Favorites"
+
+        />
+    <item
+        android:icon="@drawable/ic_history_black_24dp"
+        android:title="Order History"
+        android:id="@+id/order_history_menu"
+        />
+    <item
+        android:title="Sign out"
+        android:id="@+id/sign_out"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"/>
+</menu>

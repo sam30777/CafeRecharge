@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/CustomTheme"
+    tools:context="com.example.android.caferecharge.ItemDetaills">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="200dp">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:id="@+id/collapsingToolbar"
+            app:contentScrim="#212121"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/item_detail_image"
+                android:src="@drawable/drinks"/>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:contentInsetStart="72dp"
+                app:layout_collapseMode="pin"/>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/action_box"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="48dp">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/add_to_favorite"
+            android:background="@android:color/white"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="24dp"
+                android:id="@+id/favorites_image"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_favorite_border_black_24dp"
+                android:layout_height="24dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Add to Favorite"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"
+                android:id="@+id/favorite_text"
+                android:layout_toRightOf="@+id/favorites_image"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/add_to_cart_click"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/cart_detail_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_shopping_cart_black_24dp"
+                android:tint="@android:color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/cart_detail_image"
+                android:textColor="@android:color/white"
+                android:text="Add to Cart"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:id="@+id/add_to_cart_box"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent">
+          <TextView
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:id="@+id/decrease_quantity"
+              android:text="-"
+              android:gravity="center"
+              android:textSize="24sp"
+              android:textColor="@android:color/white"
+              android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=" X "
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+            <TextView
+               android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/item_quantity"
+                android:textColor="@android:color/white"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_toRightOf="@id/item_quantity"
+                android:id="@+id/increase_quantity"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:textSize="24sp"
+                android:text="+"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:tint="#ffffff"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/quantity_done"
+                android:padding="4dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_done_black_24dp"
+                android:background="@color/colorPrimary"
+                android:layout_height="48dp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/added_to_Cart_details"
+            android:textColor="@android:color/white"
+            android:text="Added To Cart"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Reviews "
+            android:layout_below="@+id/action_box"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="16dp"
+            android:textSize="20sp"
+            android:id="@+id/reviews_tag"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:id="@+id/review_count"
+            android:layout_below="@+id/action_box"
+            android:layout_toRightOf="@+id/reviews_tag"
+            android:text="(0)"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/user_reviews"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="60dp"
+            android:layout_below="@+id/reviews_tag"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_gravity="bottom"
+    android:layout_marginTop="16dp"
+    android:layout_height="48dp">
+    <EditText
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/rectangleborder"
+        android:backgroundTint="@color/colorAccent"
+        app:backgroundTint="@color/colorAccent"
+        android:hint="Add Review"
+        android:layout_marginLeft="4dp"
+        android:paddingLeft="12dp"
+        android:cursorVisible="true"
+        android:id="@+id/edit_text_review"
+        android:layout_height="match_parent" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="Send"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:id="@+id/send_review"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:layout_height="match_parent" />
+</LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

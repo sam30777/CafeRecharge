@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.caferecharge.MainActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/appbackground"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:alpha="10"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/chitkata"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="72dp"
+        android:layout_height="wrap_content">
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@drawable/roundedcorners"
+        android:text="Login as Student"
+        android:padding="8dp"
+        app:background="@drawable/roundedcorners"
+        app:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="#8BC34A"
+        android:id="@+id/loginAsStudent"
+        android:layout_marginEnd="8dp"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@drawable/roundedcorners"
+        android:text="Login as Staff"
+        android:padding="8dp"
+        app:background="@drawable/roundedcorners"
+        app:backgroundTint="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        android:id="@+id/loginAsStaff"
+        android:textColor="#9E9E9E"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

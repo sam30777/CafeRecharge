@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.caferecharge.StaffMainActivity">
+<RelativeLayout
+    android:layout_width="250dp"
+    android:layout_centerInParent="true"
+    android:layout_height="300dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/currentOrders"
+            android:layout_width="wrap_content"
+            app:backgroundTint="@color/colorPrimary"
+            app:tint="@android:color/white"
+            android:layout_height="wrap_content"
+            android:tint="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"
+            android:clickable="true"
+            app:fabSize="normal"
+            app:elevation="4dp"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@android:drawable/ic_menu_recent_history" />
+        <TextView
+            android:layout_width="56dp"
+            android:text="Current Orders"
+            android:layout_marginTop="2dp"
+            android:textColor="#212121"
+            android:gravity="center"
+            android:layout_alignLeft="@+id/currentOrders"
+            android:layout_below="@+id/currentOrders"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:orientation="vertical"
+       android:layout_alignParentEnd="true"
+       android:layout_height="wrap_content">
+       <android.support.design.widget.FloatingActionButton
+           android:id="@+id/enterMenu"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:backgroundTint="@color/colorPrimary"
+           app:tint="@android:color/white"
+           android:tint="@android:color/white"
+           android:backgroundTint="@color/colorPrimary"
+           android:clickable="true"
+           app:fabSize="normal"
+           app:elevation="4dp"
+           android:background="@color/colorPrimary"
+           android:layout_alignParentEnd="true"
+           app:srcCompat="@android:drawable/ic_menu_edit" />
+       <TextView
+           android:layout_width="56dp"
+           android:gravity="center"
+           android:layout_marginTop="2dp"
+           android:textColor="@color/text_color"
+           android:layout_alignParentEnd="true"
+           android:layout_below="@+id/currentOrders"
+           android:layout_height="wrap_content"
+           android:text="Edit Menu"/>
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            app:backgroundTint="@color/colorPrimary"
+            app:tint="@android:color/white"
+            android:clickable="true"
+            android:paddingBottom="50dp"
+            android:layout_marginTop="220dp"
+            android:tint="@android:color/white"
+            app:elevation="4dp"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_person_black_24dp" />
+        <TextView
+            android:layout_width="56dp"
+            android:text="Profile"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/text_color"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+</RelativeLayout>

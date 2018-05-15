@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="48dp">
+<TextView
+    android:layout_width="0dp"
+    android:layout_weight="2"
+    android:layout_height="match_parent"
+    android:text="Samosa"
+    android:textColor="@color/text_color"
+    android:gravity="center_vertical"
+    android:id="@+id/item_name_order_detail"
+    android:layout_marginLeft="16dp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="Samosa"
+        android:textColor="@color/text_color"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/item_quantity_details"
+        android:layout_marginLeft="16dp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="Samosa"
+        android:textColor="@color/text_color"
+        android:gravity="center"
+        android:layout_marginRight="16dp"
+        android:id="@+id/item_price_details"
+        android:layout_marginLeft="16dp"/>
+
+</LinearLayout>

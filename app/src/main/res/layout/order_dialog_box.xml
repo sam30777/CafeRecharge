@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:padding="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:id="@+id/info_view"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:text="Order Under Budget"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_view"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        android:textColor="#212121"
+        android:id="@+id/currentBalance"
+        android:text="Balance:"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentBalance"
+        android:textSize="20sp"
+        android:id="@+id/orer_total_dummy"
+        android:layout_marginLeft="16dp"
+        android:textColor="#212121"
+        android:text="Order Total:"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:id="@+id/balance_card"
+        android:layout_margin="16dp"
+        android:layout_below="@+id/info_view"
+        android:text="200"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textSize="20sp"
+        android:id="@+id/orer_total"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/balance_card"
+        android:text="200"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#212121"
+        android:layout_margin="16dp"
+        android:layout_below="@+id/orer_total_dummy"
+        android:text="Balance After Order"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textSize="20sp"
+        android:id="@+id/new_balance"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_margin="16dp"
+        android:layout_below="@+id/orer_total"
+        android:text="200"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedcorners"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:id="@+id/confirm_order"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        app:backgroundTint="@color/colorPrimary"
+        android:text="Confirm"/>
+
+</RelativeLayout>

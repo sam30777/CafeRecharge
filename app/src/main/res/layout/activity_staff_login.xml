@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.caferecharge.StudentLogin">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/appbackground"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:hint="STAFF ID"
+        android:textColor="@color/colorPrimary"
+        android:paddingLeft="16dp"
+        android:padding="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        app:background="@drawable/roundedcorners"
+        app:backgroundTint="@android:color/white"
+        android:background="@drawable/roundedcorners"
+        android:backgroundTint="@android:color/white"
+        android:paddingRight="16dp"
+        android:id="@+id/staffId"
+        android:inputType="text"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_width="match_parent"
+        android:hint="Password"
+        android:padding="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/roundedcorners"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:paddingLeft="16dp"
+        app:background="@drawable/roundedcorners"
+        app:backgroundTint="@android:color/white"
+        android:inputType="textPassword"
+        android:backgroundTint="@android:color/white"
+        android:paddingRight="16dp"
+        android:id="@+id/password_staff"
+        android:layout_below="@+id/staffId"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:src="@drawable/chitkata"
+        android:layout_centerHorizontal="true"
+        android:layout_height="200dp" />
+
+    <Button
+        android:id="@+id/loginStf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_staff"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/roundedcorners"
+        android:backgroundTint="#8BC34A"
+        android:padding="8dp"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        app:background="@drawable/roundedcorners"
+        app:backgroundTint="@color/colorPrimary" />
+</RelativeLayout>
