@@ -256,6 +256,7 @@ public class CartActivity extends AppCompatActivity {
         foodItems.removeAll(foodItems);
         cartAdapter.notifyDataSetChanged();
         updateTextTotal();
-        startActivity(new Intent(CartActivity.this,OrderDates.class));
+        Intent intent=new Intent(CartActivity.this,OrderDates.class);
+        startActivity(intent);
     }
 }

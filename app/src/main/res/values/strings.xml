@@ -43,4 +43,6 @@
     <string name="notification">notification</string>
     <string name="orderDone">orderDone</string>
     <string name="orderNum">orderNum</string>
+    <string name="userVerifty">userVarificationKey</string>
+    <string name="student_key">student</string>
 </resources>

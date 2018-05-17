@@ -40,7 +40,9 @@ public class StaffLogin extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(StaffLogin.this,"Signed In", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(StaffLogin.this,StaffMainActivity.class));
+                            Intent intent=new Intent(StaffLogin.this,OrderDates.class);
+                            intent.putExtra(getString(R.string.satffBool),getString(R.string.staffIntent));
+                            startActivity(intent);
                         }else{
                             Toast.makeText(StaffLogin.this,"Login Failed", Toast.LENGTH_SHORT).show();
                         }

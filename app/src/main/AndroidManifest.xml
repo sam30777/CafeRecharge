@@ -3,6 +3,8 @@
     package="com.cafedroid.android.caferecharge">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -48,7 +50,8 @@
             android:label="Details"
             android:parentActivityName="com.example.android.caferecharge.OrderDates" />
         <activity android:name="com.example.android.caferecharge.favorite" />
-        <activity android:name="com.example.android.caferecharge.StaffMainActivity"></activity>
+        <activity android:name="com.example.android.caferecharge.StaffMainActivity" />
+        <activity android:name="com.example.android.caferecharge.UserProfile"></activity>
     </application>
 
 </manifest>

@@ -25,6 +25,7 @@ public class OrderDates extends AppCompatActivity implements OrderHistoryAdapter
     private ArrayList<HistoryData> arrayList = new ArrayList<>();
     private RecyclerView recyclerView;
     private OrderHistoryAdapter orderHistoryAdapter;
+    Boolean isStaff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +35,14 @@ public class OrderDates extends AppCompatActivity implements OrderHistoryAdapter
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         recyclerView = findViewById(R.id.recycler_order_history);
-        orderHIstRef = FirebaseDatabase.getInstance().getReference().child(firebaseUser.getUid()).child(getString(R.string.newOrder)).child(getString(R.string.orderNum));
+        orderHIstRef = FirebaseDatabase.getInstance().getReference().child(firebaseUser.getUid()).child(getString(R.string.newOrder));
         Intent intent = getIntent();
-        if (intent == null) {
+        String getKey=intent.getStringExtra(getString(R.string.userVerifty));
+
+        if (getKey==null) {
+            isStaff=false;
             readHistory();
-            DatabaseReference notificationRef = FirebaseDatabase.getInstance().getReference().child(firebaseUser.getUid()).child(getString(R.string.notification));
+          /*  DatabaseReference notificationRef = FirebaseDatabase.getInstance().getReference().child(firebaseUser.getUid()).child(getString(R.string.notification));
             notificationRef.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
@@ -49,7 +53,7 @@ public class OrderDates extends AppCompatActivity implements OrderHistoryAdapter
                 public void onCancelled(DatabaseError databaseError) {
 
                 }
-            });
+            });*/
         } else {
             readForStaff();
         }
@@ -58,6 +62,7 @@ public class OrderDates extends AppCompatActivity implements OrderHistoryAdapter
     }
 
     private void readForStaff() {
+        isStaff=true;
         arrayList = new ArrayList<>();
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child(getString(R.string.current));
         databaseReference.addChildEventListener(new ChildEventListener() {
@@ -133,7 +138,10 @@ public class OrderDates extends AppCompatActivity implements OrderHistoryAdapter
         HistoryData historyData = arrayList.get(position);
         Intent intent = new Intent(OrderDates.this, order_details.class);
         intent.putExtra(getString(R.string.order_key), historyData.getKey());
-        intent.putExtra(getString(R.string.satffBool), getString(R.string.staffIntent));
+        if(isStaff){
+            intent.putExtra(getString(R.string.satffBool), getString(R.string.staffIntent));
+        }
+
         startActivity(intent);
 
     }

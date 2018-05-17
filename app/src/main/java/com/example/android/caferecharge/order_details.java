@@ -47,12 +47,14 @@ public class order_details extends AppCompatActivity {
         Intent intent=getIntent();
         String s =intent.getStringExtra(getString(R.string.order_key));
         Toast.makeText(order_details.this,s, Toast.LENGTH_SHORT).show();
-        if(intent.getStringExtra(getString(R.string.satffBool)).equals(getString(R.string.staffIntent))){
+        if(intent.getStringExtra(getString(R.string.satffBool))!=null){
+            Toast.makeText(this,"Staff Details",Toast.LENGTH_SHORT).show();
             databaseReference=FirebaseDatabase.getInstance().getReference().child(getString(R.string.current)).child(s);
             button.setVisibility(View.VISIBLE);
             setButton();
         }else{
-
+            Toast.makeText(this,"Student Details",Toast.LENGTH_SHORT).show();
+            button.setVisibility(View.GONE);
             firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
             databaseReference= FirebaseDatabase.getInstance().getReference().child(firebaseUser.getUid()).child(getString(R.string.newOrder)).child(s);
         }
